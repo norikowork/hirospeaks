@@ -12,6 +12,7 @@ const messages = [
   {
     id: 64,
     title: "Lessons from the Pacific #53",
+    audio: "/content/message64.mp3",
     excerpt: "Our team postponed my solo nonstop Pacific crossing from 2027 to 2028. Letting go of my own timeline taught me that leadership protects the mission, not the plan.",
     date: "2026-11-10",
     category: ["Leadership", "Keynote Speaker"],
