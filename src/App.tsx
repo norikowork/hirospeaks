@@ -12,6 +12,8 @@ import MessageDetailJa from "./pages/MessageDetailJa";
 import Media from "./pages/Media";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsAndConditions from "./pages/TermsAndConditions";
+import PrivacyPolicyJa from "./pages/PrivacyPolicyJa";
+import TermsAndConditionsJa from "./pages/TermsAndConditionsJa";
 import NotFound from "./pages/NotFound";
 import RouteMeta from "./components/RouteMeta";
 
@@ -49,6 +51,8 @@ const App = () => (
           <Route path="/ja/media" element={<Media lang="ja" />} />
           <Route path="/privacy" element={<PrivacyPolicy />} />
           <Route path="/terms" element={<TermsAndConditions />} />
+          <Route path="/ja/privacy" element={<PrivacyPolicyJa />} />
+          <Route path="/ja/terms" element={<TermsAndConditionsJa />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

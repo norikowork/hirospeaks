@@ -20,6 +20,7 @@ const messages = [
   {
     id: 63,
     title: "Courtesy Visit to the Governor of Kumamoto Prefecture",
+    audio: "/content/message63.mp3",
     excerpt: "I had the honor of a courtesy visit to the Governor of Kumamoto Prefecture, and the moment was broadcast on Kumamoto television.",
     date: "2026-11-11",
     category: ["Arigato"],
@@ -2655,6 +2656,24 @@ const MessageDetail = () => {
               })}
             </p>
           </div>
+
+          {/* Audio: native player so screen readers and keyboards can play it */}
+          {message.audio && (
+            <section aria-labelledby="listen-heading" className="mb-10 rounded-lg border border-navy/10 bg-white p-5">
+              <h2 id="listen-heading" className="font-inter text-base font-semibold text-navy mb-3">
+                Listen to this message
+              </h2>
+              <audio
+                controls
+                preload="metadata"
+                src={message.audio}
+                aria-label={`Listen to this message: ${message.title}`}
+                className="w-full"
+              >
+                <a href={message.audio}>Download the audio of this message</a>
+              </audio>
+            </section>
+          )}
 
           {/* Content */}
           <article className="prose prose-lg max-w-none">

@@ -26,6 +26,14 @@ const LanguageSwitcher = () => {
       return currentLang === 'ja' ? '/media' : '/ja/media';
     }
 
+    // プライバシーポリシー・利用規約
+    if (pathname === '/privacy' || pathname === '/ja/privacy') {
+      return currentLang === 'ja' ? '/privacy' : '/ja/privacy';
+    }
+    if (pathname === '/terms' || pathname === '/ja/terms') {
+      return currentLang === 'ja' ? '/terms' : '/ja/terms';
+    }
+
     // その他のページ（ホームなど）
     return currentLang === 'ja' ? '/' : '/ja';
   };
